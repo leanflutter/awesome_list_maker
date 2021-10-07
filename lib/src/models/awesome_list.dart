@@ -37,6 +37,10 @@ class AwesomeList {
     );
   }
 
+  factory AwesomeList.fromYaml(dynamic yaml) {
+    return AwesomeList.fromJson(Map<String, dynamic>.from(yaml));
+  }
+
   Map<String, dynamic> toJson() {
     return {
       'name': name,

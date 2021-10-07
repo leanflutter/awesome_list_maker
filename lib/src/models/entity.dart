@@ -13,7 +13,7 @@ class Entity {
 
   factory Entity.fromJson(Map<String, dynamic> json) {
     return Entity(
-      name: json['name'],
+      name: json['name'] ?? json['pub_id'],
       description: json['description'],
       pub_id: json['pub_id'],
       github_id: json['github_id'],
