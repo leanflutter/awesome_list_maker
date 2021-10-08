@@ -21,12 +21,15 @@ class AwesomeList {
     List<Category> categories = (json['categories'] as List)
         .map((item) => Category.fromJson(Map<String, dynamic>.from(item)))
         .toList();
+    categories.sort((a, b) => a.name.compareTo(b.name));
     List<Tag> tags = (json['tags'] as List)
         .map((item) => Tag.fromJson(Map<String, dynamic>.from(item)))
         .toList();
+    tags.sort((a, b) => a.name.compareTo(b.name));
     List<Entity> entities = (json['entities'] as List)
         .map((item) => Entity.fromJson(Map<String, dynamic>.from(item)))
         .toList();
+    entities.sort((a, b) => a.name.compareTo(b.name));
 
     return AwesomeList(
       name: json['name'],
