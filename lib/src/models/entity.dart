@@ -4,6 +4,7 @@ class Entity {
   String? description;
   String? pub_id;
   String? github_id;
+  String? livepreview_url;
   String? category;
 
   Entity({
@@ -12,6 +13,7 @@ class Entity {
     this.description,
     this.pub_id,
     this.github_id,
+    this.livepreview_url,
     this.category,
   });
 
@@ -22,6 +24,7 @@ class Entity {
       description: json['description'],
       pub_id: json['pub_id'],
       github_id: json['github_id'],
+      livepreview_url: json['livepreview_url'],
       category: json['category'],
     );
   }
@@ -33,6 +36,7 @@ class Entity {
       'description': description,
       'pub_id': pub_id,
       'github_id': github_id,
+      'livepreview_url': livepreview_url,
       'category': category,
     }..removeWhere((key, value) => value == null);
   }
