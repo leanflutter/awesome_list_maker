@@ -78,10 +78,10 @@ class AwesomeListMaker {
       Entity entity = awesomeList.entities[i];
       if (entity.pub_id != null) {
         PubPackage pubPackage = await _getPubPackage(entity.pub_id!);
-        awesomeList.entities[i].description = pubPackage.description;
+        awesomeList.entities[i].description = pubPackage.description.trim();
       } else if (entity.github_id != null) {
         Repository repository = await _getGhRepository(entity.github_id!);
-        awesomeList.entities[i].description = repository.description;
+        awesomeList.entities[i].description = repository.description.trim();
       }
     }
 
