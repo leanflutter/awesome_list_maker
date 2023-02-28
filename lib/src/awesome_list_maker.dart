@@ -7,7 +7,6 @@ import 'package:pub_api_client/pub_api_client.dart';
 import 'package:yaml/yaml.dart';
 
 import 'models/awesome_list.dart';
-import 'models/category.dart';
 import 'models/entity.dart';
 import 'utils/pretty_json.dart';
 
